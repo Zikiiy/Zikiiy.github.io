@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+    <title>Zolooy Martina Miku</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            background: #020202;
+            color: white;
+        }
+
+        .section-wrapper {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            align-items: center;
+
+        }
+
+        .text-section {
+            flex: 1;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 5%;
+            transform: translateX(-100%);
+            animation: slide-in 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        .text-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .text-section p {
+            line-height: 1.6;
+            font-size: 1.5rem;
+        }
+
+        .masonry-gallery {
+            flex: 2;
+            column-count: 3;
+            column-gap: 10px;
+            padding: 40px;
+            transform: translateX(100%);
+            animation: slide-in 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        .picture-container {
+            position: relative;
+            margin-bottom: 10px;
+            break-inside: avoid;
+            transition: all 0.5s ease;
+        }
+
+        .picture-container:hover {
+            transform: scale(0.95);
+        }
+
+        .picture-container img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+            border: 2px solid #ae95ff;
+            background-color: #111;
+        }
+
+        .picture-container {
+            position: relative;
+            margin-bottom: 10px;
+            break-inside: avoid;
+        }
+
+        .picture-container .credit {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            font-size: 14px;
+            background-color: rgba(0, 0, 25, 0.6);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .picture-container a {
+            cursor: crosshair;
+        }
+
+        .picture-container .credit a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .picture-container:hover {
+            transform: scale(0.95);
+        }
+
+        #god-damn-horse {
+            transition: all 0.5s ease;
+            border-radius: 1px;
+        }
+
+        #god-damn-horse:hover {
+            transform: scale(15);
+        }
+
+        @keyframes slide-in {
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .masonry-gallery {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .section-wrapper {
+                flex-direction: column;
+            }
+
+            .masonry-gallery {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section-wrapper">
+        <div class="text-section">
+            <h1>Zik<span style="color: #ae95ff;">iiy</span></h1>
+            <p>This is the representation, aka oc/sona of my online identity.</p>
+            <p>If you plan to draw this character, you are under no conditions allowed to include it in <span style="color: #E57373; font-weight: bold">NSFW, suggestive or fetish illustrations</span>. Respect my wishes.</p>
+            <p style="font-size: 1rem">If you drew Zikiiy and want the drawing displayed here, contact me on Discord</p>
+            <p><img src="https://preview.redd.it/lets-all-share-funny-photos-of-our-horses-v0-vr89zfmpdjua1.jpeg?width=2316&format=pjpg&auto=webp&s=279c0302fe3f0db2fa691f67f66bc52ca812baa4" id="god-damn-horse" style="width: 20px;"></p>
+            <a id="back" href="index.html">return</a>
+        </div>
+        <div class="masonry-gallery">
+
+            <div class="picture-container">
+                <a href="https://www.youtube.com/watch?v=G_JfKOjwzwo&list=RDGMEMCMFH2exzjBeE_zAHHJOdxgVMG_JfKOjwzwo&start_radio=1">
+                    <img src="C:\Users\tadeu\Desktop\gitbas\mystihouse\assets\nohaynada.png" alt="1">
+                    <p class="credit"><a href="https://www.youtube.com/watch?v=G_JfKOjwzwo&list=RDGMEMCMFH2exzjBeE_zAHHJOdxgVMG_JfKOjwzwo&start_radio=1">xdxdxddxdxd</a></p>
+                </a>
+            </div>
+
+
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+    <title>(AWESOME TAB ◟[˳_˳]ʌ˽ʌ</title>
+    <link rel="icon" href="../fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: black;
+            background-color: #000010;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        .left-section {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 2rem 5%;
+            transform: translateX(-80%);
+            animation: slide-in 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        .content {
+            max-width: 500px;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .wave {
+            display: inline-block;
+            animation: wave 2s infinite;
+        }
+
+        .desc {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 2rem;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: inherit;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .link {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .links a:hover .link-l {
+            transform: scale(0.9) rotate(-10deg);
+            cursor: crosshair;
+            color: #F06292;
+        }
+
+        .links a:hover .link-r {
+            transform: scale(0.9) rotate(10deg);
+            cursor: crosshair;
+            color: #F06292;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn-floaty {
+            display: inline-block;
+            animation: float 5s ease-in-out infinite;
+            animation-delay: 2s;
+            transform: translateY(-4px);
+        }
+
+        .btn {
+            background-color: white;
+            color: black;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-size: 1.1rem;
+            cursor: crosshair;
+            font-family: 'Consolas', monospace;
+            font-weight: 600;
+            text-align: left;
+            width: fit-content;
+            transform: translateY(-4px);
+            transition: all 0.5s ease;
+        }
+
+        .btn-floaty:nth-child(2) {
+            animation-delay: 2.7s;
+        }
+
+        .btn-floaty:nth-child(3) {
+            animation-delay: 3.4s;
+        }
+
+        .btn-floaty:nth-child(4) {
+            animation-delay: 4.1s;
+        }
+
+        .btn-floaty:first-child .btn {
+            background-color: #E57373;
+        }
+
+        .btn-floaty:nth-child(2) .btn {
+            background-color: #FFEE58;
+        }
+
+        .btn-floaty:nth-child(3) .btn {
+            background-color: #03A9F4;
+        }
+
+        .btn-floaty .btn:hover {
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-floaty:first-child .btn:hover {
+            transform: scale(0.9) rotate(-4deg);
+        }
+
+        .btn-floaty:nth-child(2) .btn:hover {
+            transform: scale(0.9) rotate(-2deg);
+        }
+
+        .btn-floaty:nth-child(3) .btn:hover {
+            transform: scale(0.9) rotate(2deg);
+        }
+
+        .btn-floaty:nth-child(4) .btn:hover {
+            transform: scale(0.9) rotate(4deg);
+        }
+
+        .tooltip {
+            position: relative;
+        }
+
+        .tooltip::after {
+            content: attr(the-tooltip);
+            position: absolute;
+            top: -100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            color: black;
+            padding: 6px 10px;
+            border-radius: 6px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+            font-size: 0.85rem;
+            z-index: 10;
+        }
+
+        .tooltip:hover::after {
+            opacity: 1;
+        }
+
+        .right-section {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .right-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.ibb.co/78mgqNz/He-mews-new.webp');
+            mask-image: linear-gradient(to right, transparent, black 100%, black);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 100%, black);
+            transform: translateX(100%);
+            pointer-events: none;
+            animation: slide-in 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+
+        }
+
+        .changelog {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+            width: 80%;
+            max-width: 600px;
+            max-height: 80vh;
+
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+
+            gap: 10px;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px white solid;
+
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .changelog-content {
+            overflow-y: auto;
+            width: 100%;
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-right: 5px;
+        }
+
+        .changelog.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .changelog-container {
+            position: relative;
+            background-color: black;
+            border-radius: 10px;
+            border: 2px solid white;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 0 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .changelog-container ul {
+            list-style-type: none;
+        }
+
+        .close-changelog {
+            position: absolute;
+            top: 15px;
+            right: 40px;
+            font-size: 40px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: white;
+            transition: color 0.2s ease;
+        }
+
+        .close-changelog:hover {
+            color: #E57373;
+        }
+
+        .changelog-filter {
+            padding: 5px;
+        }
+        
+        .changelog-filter label {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 0 auto;
+            gap: 8px;
+            background-color: #FFF;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 12px 12px;
+            color: #000;
+            cursor: crosshair;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        .changelog-filter label:hover {
+            background-color: #000;
+            border-color: #FFF;
+            color: #fff;
+        }
+
+        .changelog-filter input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: crosshair;
+        }
+
+        .version {
+            position: fixed;
+            top: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        @keyframes float {
+            0%   { transform: translateY(-4px); }
+            50%  { transform: translateY(4px); }
+            100% { transform: translateY(-4px); }
+        }
+
+        @keyframes slide-in {
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .left-section {
+                background-color: rgba(0, 0, 16, 0.9);
+                padding: 2rem;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                min-height: 60vh;
+                transform: none;
+                animation: none;
+            }
+
+            .left-section::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: -1;
+                opacity: 0.7;
+                background: url('https://f2.toyhou.se/file/f2-toyhou-se/images/99100255_CyiHpU8BPQHyv4Z.png');
+                background-position: center;
+                background-size: 18rem;
+            }
+
+            .links, .buttons {
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 0.7rem;
+            }
+            
+            .right-section, .right-section::before {
+                display: none
+            }
+
+            .title {
+                font-size: 2.5rem;
+            }
+            
+            .desc {
+                font-size: 1.2rem;
+            }
+
+            
+            .btn {
+                padding: 10px 15px;
+                font-size: 1rem;
+            }
+
+            .btn-floaty {
+                animation-delay: 0s;
+            }
+
+            .btn-floaty:nth-child(2) {
+                animation-delay: 0.7s;
+            }
+
+            .btn-floaty:nth-child(3) {
+                animation-delay: 1.4s;
+            }
+
+            .btn-floaty:nth-child(4) {
+                animation-delay: 2.1s;
+            }
+        }
+    </style>
+    <script src="../scripts/scrapeGithubData.js"></script>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="left-section">
+            <div class="content">
+                <h1 class="title"><< Hoi!! >></h1>
+                <p class="desc">i'm Zikiiy <span style="opacity: 0.3;">[>_<]</span></p>
+                <p class="desc"><span style="color: rgb(229, 114, 114);">she</span>/<span style="color: rgb(4, 172, 244);">her</span>/they <span style="opacity: 0.3;">[🍰 25 July]</span></p>
+                <hr color="#212121" size="1px">
+                <p class="desc" style="font-size: 1.2rem;">I make music! <span style="opacity: 0.3;"> anti serious sound art...</span></p>
+                <p class="desc" style="font-size: 1.2rem;">I enjoy all kinds of art. <span style="opacity: 0.3;">  you could say it's a passion.</span></p>
+                <p class="desc" style="font-size: 1.2rem;">
+                    i can speak                     
+                            
+                        <a href="https://en.wikipedia.org/wiki/Spanish_language" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/1920px-Flag_of_Mexico.svg.png" width="36px" style="border-radius: 6px; vertical-align: middle;" alt="ES">
+                        </a>
+                        <a href="https://en.wikipedia.org/wiki/English_language" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1280px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" width="36px" style="border-radius: 6px; vertical-align: middle;" alt="EN">
+                        </a> fluently.
+                <p class="desc" style="font-size: 1.2rem;"> <span style="opacity: 0.3;">Also I’m studying Japanese!</span></p>
+                <p class="desc" style="font-size: 1.2rem;">おんがくがだいすきです！</p>
+                
+
+                <div class="links">
+                    <a href="https://www.youtube.com/@zikiiiy" target="_blank">
+                        <svg class="link link-l" xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M23.498 6.186a3.02 3.02 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.02 3.02 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.02 3.02 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.02 3.02 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814M9.545 15.568V8.432L15.818 12z" />
+                        </svg>
+                    </a>
+
+                    <a href="https://www.instagram.com/zikiiy_/" target="_blank" aria-label="INSTAGRAMMM!!!">
+                        <i class="fa-brands fa-instagram link link-r" style="font-size: 40px;"></i>
+                            <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </i>
+                    </a>
+
+                    <a href="https://bsky.app/profile/zikiiy.bsky.social" target="_blank">
+                        <svg class="link link-l" xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565C.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479c.815 2.736 3.713 3.66 6.383 3.364q.204-.03.415-.056q-.207.033-.415.056c-3.912.58-7.387 2.005-2.83 7.078c5.013 5.19 6.87-1.113 7.823-4.308c.953 3.195 2.05 9.271 7.733 4.308c4.267-4.308 1.172-6.498-2.74-7.078a9 9 0 0 1-.415-.056q.21.026.415.056c2.67.297 5.568-.628 6.383-3.364c.246-.828.624-5.79.624-6.478c0-.69-.139-1.861-.902-2.206c-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8" />
+                        </svg>
+                    </a>
+
+                    <a href="https://x.com/Zikiiy" target="_blank" aria-label="tuter orex">
+                        <i class="fa-brands fa-twitter link link-r" style="font-size: 40px;"></i>
+                            <path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </i>
+                    </a>
+
+                    <a id="discord-link">
+                        <span class="tooltip" the-tooltip="click to copy [@zikiiy]">
+                            <svg class="link link-l" xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M20.317 4.37a19.8 19.8 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.3 18.3 0 0 0-5.487 0a13 13 0 0 0-.617-1.25a.08.08 0 0 0-.079-.037A19.7 19.7 0 0 0 3.677 4.37a.1.1 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.08.08 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.08.08 0 0 0 .084-.028a14 14 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13 13 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10 10 0 0 0 .372-.292a.07.07 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.07.07 0 0 1 .078.01q.181.149.373.292a.077.077 0 0 1-.006.127a12.3 12.3 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.08.08 0 0 0 .084.028a19.8 19.8 0 0 0 6.002-3.03a.08.08 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.06.06 0 0 0-.031-.03M8.02 15.33c-1.182 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418m7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418" />
+                            </svg>
+                        </span>
+                        <script>
+                            document.getElementById('discord-link').addEventListener('click', function() {
+                                const tooltip = document.querySelector('.tooltip');
+
+                                navigator.clipboard.writeText('@zikiiy').then(function() {
+                                    tooltip.setAttribute('the-tooltip', 'copied!');
+                                    setTimeout(() => {
+                                        tooltip.setAttribute('the-tooltip', 'click to copy [@zikiiy]');
+                                    }, 2000);
+                                }).catch(function(error) {
+                                    tooltip.setAttribute('the-tooltip', 'err... not copied. ' + error);
+                                });
+                            });
+                        </script>
+                    </a>
+
+                </div>
+                
+                <div class="buttons">
+                    <div class="btn-floaty">
+                        <a href="bl.html">
+                            <button class="btn">skibidi</button>
+                        </a>
+                    </div>
+                    <div class="btn-floaty">
+                        <a href="https://zikiiy.atabook.org/">
+                            <button class="btn" href="">Guest Book</button>                        
+                        </a>
+                    </div>
+                    <div class="btn-floaty">
+                        <a href="characters.html">
+                            <button class="btn">characters</button>
+                        </a>    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="right-section"></div>
+        
+        
+
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
