@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+      @font-face {
+        font-family: 'MS Gothic';
+        src: url('msgothic.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      body {
+        font-family: 'MS Gothic', 'MS PGothic', 'Meiryo', 'Arial', sans-serif;
+        background: url('https://file.garden/aNOOjlMKyWDQ8cxJ/ebgigyas.gif');
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      .main-wrap {
+        max-width: 1200px;
+        margin: 40px auto 0 auto;
+        padding: 0 10px;
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .sidebar {
+        background: #fff;
+        border: 2px solid #939393;
+        border-radius: 0;
+        width: 220px;
+        padding: 18px 12px 18px 12px;
+        box-shadow: 2px 2px 0 #939393;
+        font-size: 15px;
+      }
+      .sidebar .title-img-wrap {
+        position: relative;
+        margin-bottom: 18px;
+        height: 40px;
+      }
+      .sidebar .title-img-wrap img {
+        height: 40px;
+        display: block;
+        width: 100%;
+        object-fit: contain;
+      }
+      .sidebar .title-img-wrap span {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+        pointer-events: none;
+        text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+      }
+      .sidebar a {
+        display: block;
+        color: #222;
+        text-decoration: underline;
+        margin: 10px 0;
+        font-size: 15px;
+        transition: color 0.2s;
+      }
+      .sidebar a:hover {
+        color: #aa3356;
+      }
+      .go-back {
+        font-size: 14px;
+        margin-bottom: 18px;
+        color: #0077cc;
+        text-decoration: underline;
+        display: block;
+      }
+      .blog-box {
+        flex: 1;
+        background: #fff;
+        border: 2px solid #939393;
+        border-radius: 0;
+        padding: 28px 24px;
+        box-shadow: 2px 2px 0 #939393;
+        font-size: 15px;
+        color: #222;
+        min-width: 0;
+        max-width: 800px;
+      }
+      .blog-box h2 {
+        margin-top: 0;
+        font-size: 22px;
+        color: #aa3356;
+        border-bottom: 1px solid #939393;
+        padding-bottom: 4px;
+      }
+      /* keep blog images crisp when scaled */
+      .entry-image img {
+        display: block;
+        width: auto; /* prefer natural width */
+        max-width: 100%; /* still responsive on small screens */
+        height: auto;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        image-rendering: -moz-crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+      }
+      /* responsive youtube embed */
+      .youtube-player { margin: 12px 0; }
+      .youtube-player .embed-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+      .youtube-player iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+  /* clickable thumbnail fallback when embeds are blocked */
+  .youtube-player .thumb-wrap { position: relative; display: block; max-width:100%; cursor: pointer; text-decoration: none; }
+  .youtube-player .thumb-wrap img { display:block; width:100%; height:auto; }
+  .youtube-player .thumb-play { position: absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:64px; height:64px; border-radius:50%; background: rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; }
+  .youtube-player .thumb-play:after { content:''; display:block; margin-left:6px; width:0; height:0; border-left: 18px solid #fff; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+      @media (max-width: 900px) {
+        .main-wrap {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .sidebar, .blog-box {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-wrap">
+      <div class="sidebar">
+        <a href="/home.html" class="go-back">&larr; Go back</a>
+        <div class="title-img-wrap">
+          <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/uistamp.png" alt="Entry">
+          <span>Entries!</span>
+        </div>
+        <a href="/dec25">December 2025</a>
+        <a href="/mar26">March 2026</a>
+      </div>
+      <div class="blog-box">
+        <h2 id="entry1">03.29.26</h2>
+        <p>
+Hi, its almost April... I said that I would be updating this more frequently but... I forgot, and school isnt helping tho. This semester was so hard... <br><br>
+But it wasnt that bad, im on vacations again and i have been doing a lot of things, some new things too, like...<br><br>
+<h2>Music</h2>
+In December I mentioned learning piano, and im learning! I spent my saved money to buy it, its the P-145 by Yamaha. Im currently learning solfege, its hard... but im also practicing songs I like, for example, the first one was My Castle Town by Toby Fox! Or a simplified version of 3rd Eye from Touhou, I love that song... <br><br>
+
+        <div class="entry-image" style="margin:12px 0;">
+          <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/piano.jpg" alt="entry image" style="max-width:100%;height:auto;display:block;">
+        </p>
+        <p>
+          I put some stuff into it. I was pretty inspired by THOSE YouTubers... (like <a href="https://www.youtube.com/channel/UCcvLSRIWJIAGFDyWtzkbiHA">Marasy</a> or <a href="https://www.youtube.com/channel/UCCAXSpIqRwoufu3nbZlSPJg">Lattice</a>). So, im tryin, im tryin. <br><br>
+          Also... recently I was messing around with FL Studio, im still very new at this, but out of all the things I have done, my favorite ones are some jazzy bossa nova stuff... idk, and a silly boss fight I made following a youtube tutorial. Im focused on making new songs, like 2 or 3 per week because of a DnD with my friends. The music is obviously not necessary, but my friends told me to make a soundtrack to improve my skills. Thats cool. <br><br>
+          So, these are the songs... I´ll probably upload them on streaming someday, maybe in a month or so... I hope you like them... <br><br>
+
+          <h4>This is the Bossa one.</h4>
+          <audio controls>   <source src="https://file.garden/aNOOjlMKyWDQ8cxJ/dndf.ogg" type="audio/mpeg">   Your browser doesnt support ts shit....... </audio>
+
+          <h4>A kind of waltz.</h4>
+          <audio controls>   <source src="https://file.garden/aNOOjlMKyWDQ8cxJ/waltz.ogg" type="audio/mpeg">   Your browser doesnt support ts shit....... </audio>
+
+          <h4>The silly boss battle.</h4> i think this one is a bit loud so low your volume...<br><br>
+          <audio controls>   <source src="https://file.garden/aNOOjlMKyWDQ8cxJ/BSSBT.ogg" type="audio/mpeg">   Your browser doesnt support ts shit....... </audio> <br><br><br>
+
+          <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/kikuo.jpg" alt="entry image" style="max-width:10%;height:auto;display:block;">
+
+          In 2025 I went to Kikuo's concert and enjoyed it a lot... and I preordered 2 tickets for the tour this April, April 2... and with one week left, he canceled... I was so excited for the concert, but its alright. <br><br>
+          Yesterday Kikuo released his entire discography on CD, and I immediately bought 2. I wanted Kikuo Miku 6 and 4, but 6 was sold out, so I bought 2 and 4, im not complaining. Im very happy, I forgive you this time, Kikuo, hehe. <br><br>
+
+            <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/kikuocd.png" alt="entry image" style="max-width:100%;height:auto;display:block;"> <br><br>
+
+          <h2>Reading</h2>
+
+          In this period of time, I read three books: <strong>The Stranger</strong>, <strong>The Odyssey</strong>, and a book by a Mexican writer, <strong>Cuentos para Monstruos</strong> by Santiago Gonzáles Pedraza. A friend lent me the last one.<br><br>          
+          I liked <strong>The Odyssey</strong> very much. When I finished it, I got into mythology. I love it, but sometimes it confuses me because of the huge amount of stories it has.<br><br>
+          <strong>The Stranger</strong> took me by surprise with that ending, and just like my surprise, that feeling is also captured in the book... those moments when, in such a short time, a lot can happen. I saw people have two views of the story: one where the protagonist, Meursault, is seen as a nihilistic, apathetic bad person, and another where he is seen as a man misunderstood by society. Personally, I see him with empathy, but I also believe a lot in adaptation. Sometimes we dont want to do things, but we have to, maybe for survival or moral reasons. I think the book exaggerates those feelings in Meursault to communicate its message, but I also think human emotions cant be ignored like Meursault does.<br><br>
+          <strong>Cuentos para Monstruos</strong> covers themes of trauma, anger, frustration, and human emotions in general. As the name suggests, they are short stories; the book is a compilation of them, and it has a good amount. Some made me think, especially one called País de Pétalos y Velas. It's interesting to see the story from those two perspectives. And another one called Carrito de los Tesoros, which explores the innocence of a child.<br><br>
+
+          <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/books.png" alt="entry image" style="max-width:100%;height:auto;display:block;"> <br><br>
+          (yes, i read classical literature because of limbus, but im planning about reading other ones.) <br><br>
+
+          <h2>Games</h2>
+          In February I was addicted to Mewgenics. I bought the game on release day, and I really loved the OST... I left it for a month, but recently I started playing again because I really want to hear the whole album, but I dont want to spoil myself, so... I'll be playing it these days. <br><br>
+          The album consists of peak music based on the game’s zones, like a desert, sewers, and the moon, but talking about stupid things like cats, poop, or even someone hating their mother?? (I dont know, I havent reached that part yet).<br><br>
+          I think my favorite song at the moment is Feline Invader... A-LI-EN CRA-TER, FE-LINE IN-VADER!!11!!1<br><br>
+
+          <div class="youtube-player">
+            <div class="embed-wrap">
+              <iframe id="ytplayer" src="https://www.youtube-nocookie.com/embed/UvIFccXk6Hs?rel=0&modestbranding=1&playsinline=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p id="yt-fallback" style="font-size:12px;color:#666;margin-top:6px;display:none;">If the player doesn't load, open the video on <a href="https://youtu.be/UvIFccXk6Hs" target="_blank" rel="noopener">YouTube</a>.</p>
+          </div>
+          <script>
+            // Try to detect a blocked embed and show a fallback link after 2.5s
+            (function(){
+              var iframe = document.getElementById('ytplayer');
+              var fallback = document.getElementById('yt-fallback');
+              var tried = false;
+              function showFallback(){ if(!tried){ tried = true; fallback.style.display = 'block'; } }
+              // Some browsers block autoplay; we only show fallback if iframe fails to load content (best-effort)
+              iframe.addEventListener('error', showFallback);
+              // also use timeout to show fallback when embed shows an error page instead of loading media
+              setTimeout(function(){
+                // if iframe still present, reveal fallback for reliability
+                showFallback();
+              }, 2500);
+            })();
+          </script>
+          
+          <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/Totoro.png" alt="entry image" style="max-width:20%;height:auto;display:block;"><br>
+          I really miss Totoro...<br><br>
+          R.I.P <br><br><br>
+
+         
+
+          I also played Ultrakill, Fraud to be specific. I think this entry is getting too long, but im literally summarizing 3 months, so to avoid writing too much, I just want to leave this here.<br><br>
+
+           <div class="embed-wrap">
+            <iframe id="spotify-player" src="https://open.spotify.com/embed/track/4o23mbPdVadUvTOXRTvn0M" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div><br><br>
+          
+          <h2>This is getting too loong it´s 1:17am... i started writing at 10pm im every eepy... yaaaaaaaaawnmhmm</h2>
+
+          Now that I write this, I realize how much happens in three months. Some things are different compared to December. Life is fast and slow at the same time, and I swear the <strong>The Stranger</strong> text that I wrote above has no intentional relation to what I just wrote...<br><br>
+          Anyways, I had the intention to put drawings on every topic I talked about like I usually do, but im not in the mood... mis dibujos no dibujean.<br><br>
+          I dont promise I'll be updating this often, but I will if something interesting happens, ig...<br><br>
+          I wanted to talk about other things, but to summarize, take this image.<br><br>
+
+          <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/shelf.jpg" alt="entry image" style="max-width:100%;height:auto;display:block;"><br>
+
+          <h4>Once again, thank you for reading, I really appreciate you and your time.</h4><br><br>
+          
+        </p>
+        </div>
+        
+  </body>
+</html>
