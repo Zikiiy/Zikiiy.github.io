@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+      @font-face {
+        font-family: 'MS Gothic';
+        src: url('msgothic.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+      body {
+        font-family: 'MS Gothic', 'MS PGothic', 'Meiryo', 'Arial', sans-serif;
+        background: url('https://file.garden/aNOOjlMKyWDQ8cxJ/ebgigyas.gif');
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      .main-wrap {
+        max-width: 1200px;
+        margin: 40px auto 0 auto;
+        padding: 0 10px;
+        display: flex;
+        gap: 24px;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .sidebar {
+        background: #fff;
+        border: 2px solid #939393;
+        border-radius: 0;
+        width: 220px;
+        padding: 18px 12px 18px 12px;
+        box-shadow: 2px 2px 0 #939393;
+        font-size: 15px;
+      }
+      .sidebar .title-img-wrap {
+        position: relative;
+        margin-bottom: 18px;
+        height: 40px;
+      }
+      .sidebar .title-img-wrap img {
+        height: 40px;
+        display: block;
+        width: 100%;
+        object-fit: contain;
+      }
+      .sidebar .title-img-wrap span {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+        pointer-events: none;
+        text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+      }
+      .sidebar a {
+        display: block;
+        color: #222;
+        text-decoration: underline;
+        margin: 10px 0;
+        font-size: 15px;
+        transition: color 0.2s;
+      }
+      .sidebar a:hover {
+        color: #aa3356;
+      }
+      .go-back {
+        font-size: 14px;
+        margin-bottom: 18px;
+        color: #0077cc;
+        text-decoration: underline;
+        display: block;
+      }
+      .blog-box {
+        flex: 1;
+        background: #fff;
+        border: 2px solid #939393;
+        border-radius: 0;
+        padding: 28px 24px;
+        box-shadow: 2px 2px 0 #939393;
+        font-size: 15px;
+        color: #222;
+        min-width: 0;
+        max-width: 800px;
+      }
+      .blog-box h2 {
+        margin-top: 0;
+        font-size: 22px;
+        color: #aa3356;
+        border-bottom: 1px solid #939393;
+        padding-bottom: 4px;
+      }
+      /* keep blog images crisp when scaled */
+      .entry-image img {
+        display: block;
+        width: auto; /* prefer natural width */
+        max-width: 100%; /* still responsive on small screens */
+        height: auto;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        image-rendering: -moz-crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+      }
+      /* responsive youtube embed */
+      .youtube-player { margin: 12px 0; }
+      .youtube-player .embed-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
+      .youtube-player iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+  /* clickable thumbnail fallback when embeds are blocked */
+  .youtube-player .thumb-wrap { position: relative; display: block; max-width:100%; cursor: pointer; text-decoration: none; }
+  .youtube-player .thumb-wrap img { display:block; width:100%; height:auto; }
+  .youtube-player .thumb-play { position: absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:64px; height:64px; border-radius:50%; background: rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center; }
+  .youtube-player .thumb-play:after { content:''; display:block; margin-left:6px; width:0; height:0; border-left: 18px solid #fff; border-top: 12px solid transparent; border-bottom: 12px solid transparent; }
+      @media (max-width: 900px) {
+        .main-wrap {
+          flex-direction: column;
+          align-items: stretch;
+        }
+        .sidebar, .blog-box {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-wrap">
+      <div class="sidebar">
+        <a href="/home.html" class="go-back">&larr; Go back</a>
+        <div class="title-img-wrap">
+          <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/uistamp.png" alt="Entry">
+          <span>Entries!</span>
+        </div>
+        <a href="#entry1">December 2025</a>
+        <a href="#entry2">March 2026</a>
+      </div>
+      <div class="blog-box">
+        <h2 id="entry1">12.18.25</h2>
+        <p>
+Uhh... Hi! It’s December now. I created this blog website back in October, but I never published it until now. December vacation has already started, so I can try to update this more often. <br><br>
+
+My intention with this blog/journal is self-expression—sharing opinions and experiences. Besides the shitty social media platforms that everyone uses, I feel like those have rotted the way people communicate nowadays. So I made this apart from that. A place where I can feel more confident expressing myself. <br><br>
+
+I could promote this blog thingy on social media, I guess. Maybe I’ll do that for the first posts. If some people stay after that, then cool, thank you for staying. But I prefer keeping this more personal and with a tiny audience. <br><br>
+        </p>
+        <div class="entry-image" style="margin:12px 0;">
+          <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/wigglyy2.gif" alt="entry image" style="max-width:100%;height:auto;display:block;">
+        </div>
+        <h2 id="entry2">12.19.25</h2>
+        <p>
+          <h2>Vacations</h2>
+          This holiday vacation has started. I love it but... I also feel a bit lonely sometimes. Im not the person who go outside with friends during this days. I would love it, but i dont know how to do the plans or ask them. Trough more days pass i feel more bored... I have my online friends whose i talk and play games with, but its not thse same. So i kinda hate vacations. <br><br>
+           I was thinking about trying a new thing this vacation, so i cant be bored! and i tought: "If i like music so much, what stops me to learn to play piano?"  So maybe that is what will happen... I have many things i want to do, like drawing and painting more, specially Oil Painting. Also i have pending books to read... so many things to do! i just need to organize myself better. (ᵕ—ᴗ—) <br><br>
+           <h2>Stupid song...</h2>
+           I also wanted to write about this freaking song.......... Its Guruguru by Omi and Masarada. AND OOH GOD.... ITS SO REAL AND RELATABLE...... I recently found out about it, not when it released... what a shame... <br><br>
+           If youre curious, here it is, I recomend you enable the subtitles for seeing the lyrics in English.<br><br>
+
+          <div class="youtube-player">
+            <div class="embed-wrap">
+              <iframe id="ytplayer" src="https://www.youtube-nocookie.com/embed/Hn6SpfEu2MA?rel=0&modestbranding=1&playsinline=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p id="yt-fallback" style="font-size:12px;color:#666;margin-top:6px;display:none;">If the player doesn't load, open the video on <a href="https://youtu.be/Hn6SpfEu2MA" target="_blank" rel="noopener">YouTube</a>.</p>
+          </div>
+          <script>
+            // Try to detect a blocked embed and show a fallback link after 2.5s
+            (function(){
+              var iframe = document.getElementById('ytplayer');
+              var fallback = document.getElementById('yt-fallback');
+              var tried = false;
+              function showFallback(){ if(!tried){ tried = true; fallback.style.display = 'block'; } }
+              // Some browsers block autoplay; we only show fallback if iframe fails to load content (best-effort)
+              iframe.addEventListener('error', showFallback);
+              // also use timeout to show fallback when embed shows an error page instead of loading media
+              setTimeout(function(){
+                // if iframe still present, reveal fallback for reliability
+                showFallback();
+              }, 2500);
+            })();
+          </script>
+          I love the aahh’s that the characters make when the other one is singing, hehe... The MV is so cute too, you can expect nothing less from Masarada. Heh—
+          There have been some situations where I finally spoke to that someone, and you get that thought of “What if they don’t want to talk to me? I don’t want to be annoying...” <br><br>
+          Also the action of ignoring or giving up hope, the thought of talking to them because you know you would never talk with that person. <br><br>  
+          And the song talking about the characters dreaming or hoping to be able to talk to each other one day... ..d. UGHHGWHHHHH— yeah, ok, you get the point. <br><br>
+          I guess social interaction can be improved with practice, and that’s the hard part! Because I don’t want to... But one day I’ll have to do it anyway... so I have to try.<br><br>
+
+          <div class="entry-image" style="margin:12px 0;">
+          <img src="https://file.garden/aNOOjlMKyWDQ8cxJ/masarada-synthv.gif" alt="entry image" style="max-width:100%;height:auto;display:block;">
+        </div>
+          Thank you for reading.
+        </p>
+        
+      </div>
+    </div>
+  </body>
+</html>
